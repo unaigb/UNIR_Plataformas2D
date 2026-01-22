@@ -300,6 +300,7 @@ public class PlayerController : MonoBehaviour
         rb.linearVelocity = Vector2.zero;
         rb.bodyType = RigidbodyType2D.Kinematic;
         anim.Play("Door-in");
+        gameObject.SetActive(false);
     }
 
     public void AnimacionSalirPuerta()
@@ -307,7 +308,6 @@ public class PlayerController : MonoBehaviour
         rb.linearVelocity = Vector2.zero;
         rb.bodyType = RigidbodyType2D.Kinematic;
         anim.Play("Door-out");
-        gameObject.SetActive(false);
         StartCoroutine(HabilitarControlSalida());
     }
 

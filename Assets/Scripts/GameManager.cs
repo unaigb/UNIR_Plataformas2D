@@ -139,12 +139,14 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1f;
         vidasActuales = vidasIniciales;
         puntos = 0;
+        juegoTerminado = false;
         SceneManager.LoadScene(1);
     }
 
     public void SalirJuego()
     {
         Time.timeScale = 1f;
+        juegoTerminado = false;
         Destroy(gameObject);
         SceneManager.LoadScene(0);
     }
